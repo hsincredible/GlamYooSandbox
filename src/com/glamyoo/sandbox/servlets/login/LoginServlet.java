@@ -1,8 +1,6 @@
 package com.glamyoo.sandbox.servlets.login;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,15 +31,15 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		try { 
 			User user = new User(); 
-			user.setUsername(request.getParameter("un")); 
-			user.setPassword(request.getParameter("pw")); 
+			user.setUsername(request.getParameter("username")); 
+			user.setPassword(request.getParameter("password")); 
 			if( user.isValid()){
 				//create session
 				user.addToDB();
-				response.sendRedirect("userLogged.jsp");
+				response.sendRedirect("login/userLogged.jsp");
 			}
 			else 
-				response.sendRedirect("inValidLogin.jsp");
+				response.sendRedirect("login/inValidLogin.jsp");
 		} 
 		catch (Throwable theException) { 
 			System.out.println(theException); 
@@ -52,7 +50,6 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
 	}
 
 }
