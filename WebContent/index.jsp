@@ -5,13 +5,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>GlamYoo Home Page</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/form.css" />
+<link rel="stylesheet" type="text/css" href="css/clear-float.css" />
 </head>
 <body>
-<h1>Welcome to JSP!</h1>
-<hr>
-<form action="MyServlet">
-	<input type="submit" value="Send" />
-</form>
+	<form action="../searchResult" class="form-wrapper cf">
+		<select name="city">
+			<option value="bangalore">
+				Bangalore
+			</option>
+			<option value="hyderabad">
+				Hyderabad
+			</option>
+			<option value="pune">
+				Pune
+			</option>
+		</select>
+        <input type="text" placeholder="Search for parlor, salon, spa or a service" required>
+        <button type="submit"> Search </button>
+    </form> 
 </body>
 </html>
+
+

@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class MyServlet
+ * Servlet implementation class searchResult
  */
-@WebServlet("/MyServlet")
-public class MyServlet extends HttpServlet {
+@WebServlet("/searchResult")
+public class searchResult extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MyServlet() {
+    public searchResult() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,8 +28,8 @@ public class MyServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		out.write("This page is under construction. Come back later.");
+		// TODO Auto-generated method stub
+		response.sendRedirect("search/searchResult.jsp");
 	}
 
 	/**
